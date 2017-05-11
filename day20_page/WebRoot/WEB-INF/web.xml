@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  <!-- 配置全局的错误处理界面 -->
+  <error-page>
+     <error-code>500</error-code><!-- 配置错误码为500的错误处理界面 -->
+     <location>/common/500.jsp</location>
+  </error-page>
+  <error-page>
+     <error-code>404</error-code><!-- 配置错误码为404的错误处理界面 -->
+     <location>/common/404.jsp</location>
+  </error-page>
+  <!-- 配置session销毁事件，单位为分钟 -->
+  <session-config>
+     <session-timeout>10</session-timeout>
+  </session-config>
+  <context-param>
+    <param-name>AA</param-name>
+    <param-value>AA' value</param-value> 
+  </context-param>
+  <context-param>
+    <param-name>BB</param-name>
+    <param-value>BB' value</param-value> 
+  </context-param>
+  <servlet>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>day08.HelloServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RequestDemo1</servlet-name>
+    <servlet-class>day09.RequestDemo1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ResponseDemo1</servlet-name>
+    <servlet-class>day09.ResponseDemo1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>responseDemo2</servlet-name>
+    <servlet-class>day09.responseDemo2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>servletLife</servlet-name>
+    <servlet-class>day10.servletLife</servlet-class>
+    <!-- 改变servlet对象创建的时间，使servlet对象在tomcat服务器在启动时就创建servlet对象和init方法 -->
+    <load-on-startup>1</load-on-startup><!-- 里面的数字越小优先级越大 -->
+  </servlet>
+  <servlet>
+    <servlet-name>ThreadDemo</servlet-name>
+    <servlet-class>day10.ThreadDemo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ConfigDemo</servlet-name>
+    <servlet-class>day10.ConfigDemo</servlet-class>
+    <!-- 初始化参数 -->
+    <init-param>
+        <param-name>1</param-name>
+        <param-value>dsagiu</param-value>
+    </init-param>
+    <init-param>
+        <param-name>2</param-name>
+        <param-value>dsjagu</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletConfig1</servlet-name>
+    <servlet-class>day10.ServletConfig1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>servletConfig2</servlet-name>
+    <servlet-class>day10.servletConfig2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletContext</servlet-name>
+    <servlet-class>day10.ServletContext</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletContext1</servlet-name>
+    <servlet-class>day10.ServletContext1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletConfig2</servlet-name>
+    <servlet-class>day10.ServletConfig2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>forwardDemo</servlet-name>
+    <servlet-class>day10.forwardDemo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Pathdemo1</servlet-name>
+    <servlet-class>day10.Pathdemo1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CookieDemo</servlet-name>
+    <servlet-class>day11.CookieDemo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteCookie</servlet-name>
+    <servlet-class>day11.DeleteCookie</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LastLoginTime</servlet-name>
+    <servlet-class>day11.LastLoginTime</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SessionDemo</servlet-name>
+    <servlet-class>day11.SessionDemo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SessionDemo1</servlet-name>
+    <servlet-class>day11.SessionDemo1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>day20_page.IndexServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RequestDemo1</servlet-name>
+    <url-pattern>/RequestDemo1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ResponseDemo1</servlet-name>
+    <url-pattern>/ResponseDemo1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>responseDemo2</servlet-name>
+    <url-pattern>/responseDemo2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>servletLife</servlet-name>
+    <url-pattern>/servletLife</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ThreadDemo</servlet-name>
+    <url-pattern>/ThreadDemo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ConfigDemo</servlet-name>
+    <url-pattern>/ConfigDemo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletConfig1</servlet-name>
+    <url-pattern>/ServletConfig1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>servletConfig2</servlet-name>
+    <url-pattern>/servletConfig2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletContext</servlet-name>
+    <url-pattern>/ServletContext</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletContext1</servlet-name>
+    <url-pattern>/ServletContext1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletConfig2</servlet-name>
+    <url-pattern>/ServletConfig2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>forwardDemo</servlet-name>
+    <url-pattern>/forwardDemo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Pathdemo1</servlet-name>
+    <url-pattern>/Pathdemo1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CookieDemo</servlet-name>
+    <url-pattern>/CookieDemo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteCookie</servlet-name>
+    <url-pattern>/DeleteCookie</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LastLoginTime</servlet-name>
+    <url-pattern>/LastLoginTime</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SessionDemo</servlet-name>
+    <url-pattern>/SessionDemo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SessionDemo1</servlet-name>
+    <url-pattern>/SessionDemo1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/Index</url-pattern>
+  </servlet-mapping>	
+</web-app>

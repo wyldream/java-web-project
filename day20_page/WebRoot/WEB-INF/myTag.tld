@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+    version="2.1">
+    
+  <tlib-version>1.1</tlib-version>
+  <!-- 标签库前缀 -->
+  <short-name>myTag</short-name>
+  <!-- 标签库的唯一标记 -->
+  <uri>http://mytag.tld</uri>
+  <tag>
+  <!-- 标签名 -->
+    <name>showIp</name>
+    <!-- 标签处理类的位置（报名加类名） -->
+    <tag-class>day14.MyTag</tag-class>
+    <!-- 输出的格式 -->
+    <body-content>scriptless</body-content>
+  </tag>
+  
+  <tag>
+    <name>tagcontext</name>
+    <tag-class>day14.MyTag1</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+    
+  <tag>
+    <name>choose</name>
+    <tag-class>day14.ChooseTag</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+
+  <tag>
+    <name>when</name>
+    <tag-class>day14.WhenTag</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute><!-- 配置属性 -->
+    <!-- 属性名称 -->
+        <name>test</name>
+        <!-- 是否必填 -->
+        <required>true</required>
+        <!-- 是否支持EL表达式 -->
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  
+  <tag>
+    <name>otherwise</name>
+    <tag-class>day14.OtherwiseTag</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  
+   <tag>
+    <name>forEach</name>
+    <tag-class>day14.ForEachTag</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute><!-- 配置属性 -->
+    <!-- 属性名称 -->
+        <name>items</name>
+        <!-- 是否必填 -->
+        <required>true</required>
+        <!-- 是否支持EL表达式 -->
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+    <!-- 属性名称 -->
+        <name>var</name>
+        <!-- 是否必填 -->
+        <required>true</required>
+        <!-- 是否支持EL表达式 -->
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+</taglib>
