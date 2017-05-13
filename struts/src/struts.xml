@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<!-- 二、总配置文件：引入其他所有配置文件 -->
+	<!-- 再引入多个xml文件时注意访问名称是否重复，特别是模糊匹配时（这里重名了，都用的user_*） -->
+	<include file="type/type.xml"></include>
+	<include file="fileUpload/upload.xml"></include>
+	<include file="datafilte/datafilter.xml"></include>
+	<!-- <include file="strutsData/data.xml"></include> -->
+	
+<!-- 		<action name="register" class="cn.itcast.a_config.UserAction" method="register">
+			<result name="success">/index.jsp</result>			
+		</action> -->
+				
+		 
+		 <!-- 使用通配符优化上面的步骤 -->
+		 <!-- http://localhost:8080/struts02/user_login -->
+<!-- 		 <action name="user_*" class="cn.itcast.a_config.UserAction" method="{1}">
+			<result name="{1}">/{1}.jsp</result>			
+		</action> -->
+		
+	
+</struts>

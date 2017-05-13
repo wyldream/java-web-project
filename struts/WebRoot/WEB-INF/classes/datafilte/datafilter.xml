@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!-- 主题的设置 -->
+    <constant name="struts.ui.theme" value="simple"></constant>
+
+	<package name="datafilter" extends="struts-default">
+	
+	    <global-results>
+			<result name="input">/register.jsp</result>
+		</global-results>
+		
+		<action name="data_login" class="datafilte.DataAction" method="login">
+			
+			<result name="success">/list.jsp</result>
+			
+		</action>
+		<!-- 注意：模糊匹配的命名规则，前面的是action类去除Action的部分（DataAction——data） -->
+		<action name="data_*" class="datafilte.DataAction" method="{1}">
+			
+			<result name="success">/list.jsp</result>
+			
+		</action>
+	</package>	
+</struts>
